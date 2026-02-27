@@ -1,10 +1,12 @@
+import datetime
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.routers import usuarios, camiones, turnos
 from app.database import engine, Base
 
 # Crear las tablas en la base de datos (solo para desarrollo)
-Base.metadata.create_all(bind=engine)
+# Base.metadata.create_all(bind=engine)
 
 app = FastAPI(
     title="API de Gestión de Flota de Camiones",
